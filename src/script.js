@@ -84,6 +84,7 @@ scene.add(pointLight3);
 
 // const pointLightHelper3 = new THREE.PointLightHelper(pointLight3, 0.1);
 // scene.add(pointLightHelper3);
+
 /**
  * Sizes
  */
@@ -130,6 +131,7 @@ scene.add(camera);
  */
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
+  alpha: true,
 });
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -154,6 +156,12 @@ const windowY = window.innerHeight / 2;
 function onMouseMove(event) {
   mouseX = event.clientX - windowX;
   mouseY = event.clientY - windowY;
+}
+
+document.addEventListener("scroll", onScroll);
+
+function onScroll(event) {
+  sphere.position.y = window.scrollY * 0.001;
 }
 
 const tick = () => {
