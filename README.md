@@ -1,6 +1,6 @@
 # 3D Sphere
 
-This is a 3D sphere that was created with three.js.
+This is a 3D sphere that was created with Three.js.
 
 Check out the demo here: [3d-sphere.vercel.app](https://3d-sphere.vercel.app)
 
