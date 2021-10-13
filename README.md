@@ -1,4 +1,4 @@
-# 3d-sphere
+# 3D Sphere
 
 This is a 3D sphere that was created with three.js.
 
