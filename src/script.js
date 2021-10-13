@@ -31,14 +31,59 @@ const material = new THREE.MeshStandardMaterial({
 const sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
 
-// Lights
+// Light 1
+const pointLight1 = new THREE.PointLight(0xffffff, 0.1);
+pointLight1.position.x = 2;
+pointLight1.position.y = 3;
+pointLight1.position.z = 4;
+scene.add(pointLight1);
 
-const pointLight = new THREE.PointLight(0xffffff, 0.1);
-pointLight.position.x = 2;
-pointLight.position.y = 3;
-pointLight.position.z = 4;
-scene.add(pointLight);
+// const light1 = gui.addFolder("Light 1");
 
+// light1.add(pointLight1.position, "x").min(-6).max(6).step(0.01);
+// light1.add(pointLight1.position, "y").min(-3).max(3).step(0.01);
+// light1.add(pointLight1.position, "z").min(-3).max(3).step(0.01);
+// light1.add(pointLight1, "intensity").min(0).max(10).step(0.01);
+
+// const pointLightHelper1 = new THREE.PointLightHelper(pointLight1, 0.1);
+// scene.add(pointLightHelper1);
+
+// Light 2
+const pointLight2 = new THREE.PointLight(0xff0000, 2);
+pointLight2.position.set(-1.86, 1, -1.65);
+pointLight2.intensity = 10;
+scene.add(pointLight2);
+
+// const light2 = gui.addFolder("Light 2");
+
+// light2.add(pointLight2.position, "x").min(-6).max(6).step(0.01);
+// light2.add(pointLight2.position, "y").min(-3).max(3).step(0.01);
+// light2.add(pointLight2.position, "z").min(-3).max(3).step(0.01);
+// light2.add(pointLight2, "intensity").min(0).max(10).step(0.01);
+
+// const pointLightHelper2 = new THREE.PointLightHelper(pointLight2, 0.1);
+// scene.add(pointLightHelper2);
+
+// Light 3
+const pointLight3 = new THREE.PointLight(0xe1ff, 2);
+pointLight3.position.set(2.13, -3, -1.98);
+pointLight3.intensity = 6.8;
+scene.add(pointLight3);
+
+// const light3 = gui.addFolder("Light 3");
+
+// const lightColer3 = { color: 0x0000ff };
+// light3.addColor(lightColer3, "color").onChange(() => {
+//   pointLight3.color.set(lightColer3.color);
+// });
+
+// light3.add(pointLight3.position, "x").min(-6).max(6).step(0.01);
+// light3.add(pointLight3.position, "y").min(-3).max(3).step(0.01);
+// light3.add(pointLight3.position, "z").min(-3).max(3).step(0.01);
+// light3.add(pointLight3, "intensity").min(0).max(10).step(0.01);
+
+// const pointLightHelper3 = new THREE.PointLightHelper(pointLight3, 0.1);
+// scene.add(pointLightHelper3);
 /**
  * Sizes
  */
