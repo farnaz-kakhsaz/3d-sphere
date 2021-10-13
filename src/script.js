@@ -4,7 +4,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
 
 // Debug
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
@@ -13,12 +13,19 @@ const canvas = document.querySelector("canvas.webgl");
 const scene = new THREE.Scene();
 
 // Objects
-const geometry = new THREE.TorusGeometry(0.7, 0.2, 16, 100);
+const geometry = new THREE.SphereBufferGeometry(0.5, 64, 64);
+
+// Texture Loader
+const textureLoader = new THREE.TextureLoader();
+const normalTexture = textureLoader.load("/textures/NormalMap.png");
 
 // Materials
-
-const material = new THREE.MeshBasicMaterial();
-material.color = new THREE.Color(0xff0000);
+const material = new THREE.MeshStandardMaterial({
+  color: 0x292929,
+  metalness: 0.7,
+  roughness: 0.2,
+  normalMap: normalTexture,
+});
 
 // Mesh
 const sphere = new THREE.Mesh(geometry, material);
