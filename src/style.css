@@ -48,3 +48,9 @@ section {
     font-size: 10vw;
   }
 }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 14vw;
+  }
+}
