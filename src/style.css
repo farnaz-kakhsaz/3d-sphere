@@ -17,16 +17,13 @@ body {
   background: rgb(24, 24, 24);
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .webgl {
   position: absolute;
   top: 0;
   left: 0;
   outline: none;
   mix-blend-mode: exclusion;
+  width: 100% !important;
 }
 
 .container {
@@ -44,4 +41,10 @@ h1 {
 
 section {
   height: 100vh;
+}
+
+@media screen and (max-width: 1280px) {
+  h1 {
+    font-size: 10vw;
+  }
 }
